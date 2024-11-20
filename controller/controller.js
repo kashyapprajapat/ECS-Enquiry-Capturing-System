@@ -11,7 +11,7 @@ export const enquiryController = (req,res) =>{
     // 1. body validation
     const body = enquirySchema.parse(req.body);
     const {name, category, emailAddress, message} = body;
-
+   console.log(name);
     // 2. Entry in Google sheet
     sheets.spreadsheets.values
      .append({
